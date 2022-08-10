@@ -5,6 +5,15 @@
 /.pnp
 .pnp.js
 
+# https://stackoverflow.com/a/60184331/3347855
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # testing
 /coverage
 
