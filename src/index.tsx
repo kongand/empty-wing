@@ -9,6 +9,8 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+const flemming = "dfd";
+
 root.render(
   <React.StrictMode>
     <App />
