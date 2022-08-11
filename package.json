@@ -73,7 +73,10 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "quotes": ["error", "single", { "allowTemplateLiterals": true }]
+    }
   },
   "browserslist": {
     "production": [
