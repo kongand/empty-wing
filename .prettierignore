@@ -1,0 +1,15 @@
+# Ignore artifacts:
+build
+coverage
+.vscode
+.yarn
+config
+node_modules
+public
+scripts
+.pnp.cjs
+.pnp.loader.mjs
+tsconfig.json
+package.json
+*.js
+*.json
