@@ -96,8 +96,8 @@
     "singleQuote": true
   },
   "lint-staged": {
-    "*": "prettier -c",
-    "*.tsx?": "eslint"
+    "*.{ts,tsx}": "eslint",
+    "*": "prettier -c"
   },
   "browserslist": {
     "production": [
