@@ -67,7 +67,10 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "postinstall": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -77,10 +80,13 @@
       "prettier"
     ],
     "rules": {
-      "react/function-component-definition": [2, {
-        "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
-      }]
+      "react/function-component-definition": [
+        2,
+        {
+          "namedComponents": "arrow-function",
+          "unnamedComponents": "arrow-function"
+        }
+      ]
     },
     "parserOptions": {
       "project": "./tsconfig.json"
@@ -88,6 +94,10 @@
   },
   "prettier": {
     "singleQuote": true
+  },
+  "lint-staged": {
+    "*": "prettier -c",
+    "*.tsx?": "eslint"
   },
   "browserslist": {
     "production": [
@@ -118,6 +128,8 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "2.7.1",
     "source-map-support": "^0.5.21",
     "ts-node": "^10.9.1"
