@@ -1,5 +1,9 @@
 import { css } from '@emotion/react';
 
+const appStyles = css`
+  height: 100%;
+`;
+
 const headerStyles = css`
   background: #fff;
   padding: 0;
@@ -30,4 +34,4 @@ const contentStyles = css`
   min-height: 17.5rem;
 `;
 
-export { headerStyles, logoStyles, triggerStyles, contentStyles };
+export { appStyles, headerStyles, logoStyles, triggerStyles, contentStyles };

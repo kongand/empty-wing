@@ -9,6 +9,7 @@ import {
 import { Layout, Menu } from 'antd';
 import React, { useState } from 'react';
 import {
+  appStyles,
   contentStyles,
   headerStyles,
   logoStyles,
@@ -18,11 +19,29 @@ import {
 const { Header, Sider, Content } = Layout;
 
 const App: React.FC = () => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
+  const [width, setWidth] = useState<string>();
+  const [collapsedWidth, setCollapsedWidth] = useState<number>();
 
   return (
-    <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+    <Layout css={appStyles}>
+      <Sider
+        trigger={null}
+        collapsible
+        collapsed={collapsed}
+        breakpoint="md"
+        width={width}
+        collapsedWidth={collapsedWidth}
+        onBreakpoint={(broken) => {
+          if (broken) {
+            setWidth('calc(100% - 4rem)');
+            setCollapsedWidth(0);
+          } else {
+            setWidth(undefined);
+            setCollapsedWidth(undefined);
+          }
+        }}
+      >
         <div css={logoStyles} />
         <Menu
           theme="dark"
