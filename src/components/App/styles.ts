@@ -1,40 +1,33 @@
 import { css } from '@emotion/react';
 
-const appStyles = css`
-  text-align: center;
-`;
-
 const headerStyles = css`
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #fff;
+  padding: 0;
 `;
 
 const logoStyles = css`
-  height: 40vmin;
-  pointer-events: none;
+  height: 2rem;
+  margin: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+`;
 
-  @media (prefers-reduced-motion: no-preference) {
-    animation: App-logo-spin infinite 20s linear;
-  }
+const triggerStyles = css`
+  padding: 0 1.5rem;
+  font-size: 1.125rem;
+  line-height: 4rem;
+  cursor: pointer;
+  transition: color 0.3s;
 
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  &:hover {
+    color: #1890ff;
   }
 `;
 
-const linkStyles = css`
-  color: #61dafb;
+const contentStyles = css`
+  background: #fff;
+  margin: 1.5rem 1rem;
+  padding: 1.5rem;
+  min-height: 17.5rem;
 `;
 
-export { appStyles, headerStyles, logoStyles, linkStyles };
+export { headerStyles, logoStyles, triggerStyles, contentStyles };

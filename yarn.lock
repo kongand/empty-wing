@@ -5639,6 +5639,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "empty-wing@workspace:."
   dependencies:
+    "@ant-design/icons": ^4.7.0
     "@babel/core": ^7.16.0
     "@emotion/react": ^11.10.0
     "@jest/types": ^28.1.3
